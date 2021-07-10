@@ -10,6 +10,12 @@
     esa caracteristica para que no se repita sea el caso */
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+}
+
+.button:active {
+    /* Reducir el tamaño al hacerle click */
+    transform: scale(.9);
 }
 
 #play {
