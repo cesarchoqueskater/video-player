@@ -1,0 +1,29 @@
+.button {
+    /* Tamaño de la Linea */
+    inline-size: 32px;
+    /* Alto de la linea */
+    block-size: 32px;
+    border: none;
+    /* Podemos usar transparent - unset - initial */
+    background-color: transparent;
+    /* Si el tamaño de los botonos son mas grandes, se repetiran por eso colocamos
+    esa caracteristica para que no se repita sea el caso */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#play {
+    background-image: url('../img/play.svg');
+}
+
+#pause {
+    background-image: url('../img/pause.svg');
+}
+
+#backward {
+    background-image: url('../img/-10.svg');
+}
+
+#forward {
+    background-image: url('../img/+10.svg');
+}
