@@ -10,13 +10,15 @@
 </head>
 
 <body>
-    <h1>Hola Mundo</h1>
-    <button class="button" id="backward"></button>
-    <button class="button" id="forward"></button>
-    <button class="button" id="play"></button>
-    <button class="button" hidden id="pause"></button>
-    <button>avanzar 10 segundos</button>
-    <video id="video" poster="./img/poster.jpg" controls muted src="./video/lofi.mp4"></video>
+    <div class="wrapper">
+        <div class="player">
+            <button class="button" id="backward" aria-label="Retroceder 10 segundos" title="Retroceder 10 segundos"></button>
+            <button class="button" id="play" aria-label="Play" title="Play"></button>
+            <button class="button" hidden id="pause" aria-label="Pause" title="Pause"></button>
+            <button class="button" id="forward" aria-label="Avanzar 10 segundos" title="Avanzar 10 segundos"></button>
+            <video id="video" poster="./img/poster.jpg" controls muted src="./video/lofi.mp4" width="400"></video>
+        </div>
+    </div>
 </body>
 
 <script>
