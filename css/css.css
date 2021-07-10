@@ -39,6 +39,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     /* z-index: 2; */
     /* Si no queremos usar el z-index, cambiamos la posicion de la etiqueta en el html */
 }

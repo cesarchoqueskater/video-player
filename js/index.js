@@ -36,3 +36,24 @@ function handleForward() {
     $video.currentTime = $video.currentTime + 10;
     console.log('para adelante 10 segundos', $video.currentTime)
 }
+
+const $progress = document.querySelector('#progress')
+$video.addEventListener('loadedmetadata', handleLoaded)
+$video.addEventListener('timeupdate', handleTimeupdate)
+
+function handleLoaded() {
+    $progress.max = $video.duration
+    console.log('ha cargado mi video', $video.duration)
+}
+
+function handleTimeupdate() {
+    $progress.value = $video.currentTime
+        // console.log('Holi', $video.currentTime)
+}
+
+$progress.addEventListener('input', handleInput)
+
+function handleInput() {
+    $video.currentTime = $progress.value
+    console.log('En que valor estoy ', $progress.value)
+}
