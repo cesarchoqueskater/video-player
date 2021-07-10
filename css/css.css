@@ -1,58 +1,71 @@
-@import './buttons.css';
-body {
-    background-color: #43DDE6;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.wrapper {
-    max-inline-size: 900px;
-    margin: auto;
-}
-
-.player {
-    position: relative;
-}
-
-.player video {
-    inline-size: 100%;
-    aspect-ratio: 16/9;
-    vertical-align: middle;
-}
-
-.player-title {
-    color: white;
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 20px;
-}
-
-.player-actions {
-    position: absolute;
-    /* border: 20px solid red; */
-    /* inset-block-end:0;
+        @import './buttons.css';
+        body {
+            background-color: #43DDE6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .wrapper {
+            max-inline-size: 900px;
+            margin: auto;
+        }
+        
+        .player {
+            position: relative;
+        }
+        
+        .player video {
+            inline-size: 100%;
+            aspect-ratio: 16/9;
+            vertical-align: middle;
+            /* Llenar la proporcion de 16/9 que colocamos*/
+            object-fit: cover;
+        }
+        
+        .player-title {
+            color: white;
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 20px;
+        }
+        
+        .player-actions {
+            position: absolute;
+            /* border: 20px solid red; */
+            /* inset-block-end:0;
     inset-block-start:0;
     inset-inline-end:0;
     inset-inline-start:0; */
-    /* Lo comentado anteriormente es igual decir inset:0 */
-    inset: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    /* z-index: 2; */
-    /* Si no queremos usar el z-index, cambiamos la posicion de la etiqueta en el html */
-}
-
-.player-progress {
-    /* border: 10px solid rebeccapurple; */
-    position: absolute;
-    inset-block-end: 0;
-    inset-inline: 0;
-    display: flex;
-    padding: 10px;
-}
-
-.player-progress input {
-    flex: 1;
-}
+            /* Lo comentado anteriormente es igual decir inset:0 */
+            inset: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            /* z-index: 2; */
+            /* Si no queremos usar el z-index, cambiamos la posicion de la etiqueta en el html */
+        }
+        
+        .player-progress {
+            /* border: 10px solid rebeccapurple; */
+            position: absolute;
+            inset-block-end: 0;
+            inset-inline: 0;
+            display: flex;
+            padding: 10px;
+        }
+        
+        .player-progress input {
+            flex: 1;
+        }
+        
+        .player-overlay {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: .3s opacity;
+        }
+        
+        .player:hover .player-overlay {
+            opacity: 1;
+        }
