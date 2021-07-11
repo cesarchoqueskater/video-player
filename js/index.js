@@ -11,6 +11,8 @@ function handlePlay() {
     $video.play();
     $play.hidden = true;
     $pause.hidden = false;
+    $backward.hidden = false;
+    $forward.hidden = false;
     console.log('le diste click al boton de play');
 }
 
@@ -18,6 +20,8 @@ function handlePause() {
     $video.pause();
     $pause.hidden = true;
     $play.hidden = false;
+    $backward.hidden = true;
+    $forward.hidden = true;
     console.log('le diste click al boton de pause');
 }
 
